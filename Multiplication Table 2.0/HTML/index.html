@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada da Multiplicação</title>
+</head>
+<body>
+  <script>
+    /*
+*Programa para ajudar a decorar a tabuada da multiplicação 
+*@author Pedro Lucas
+*@version 2.0
+*@since 20/03/26
+*/
+//PARTE 1 DO PROGRAMA -INICIO-
+let escolhas_possiveis_operacao = [1, 2, 3]
+let escolha_operacao = 'Jazzghost'
+while (!escolhas_possiveis_operacao.includes(escolha_operacao)){
+    escolha_operacao = parseInt(prompt('Faça sua escolha:\n\n[1] Estudar a tabuada da multiplicação\n\n[2] Jogo da tabuada da multiplicação\n\n[3] Vídeo para entender a lógica do programa'))
+    if (!escolhas_possiveis_operacao.includes(escolha_operacao)){
+        alert('Por favor, insira uma opção válida (1, 2 ou 3)')
+    }else if (escolhas_possiveis_operacao.includes(escolha_operacao)){
+        break
+    }
+}//While para impedir do usuário de inserir um valor inválido.
+//PARTE 1 DO PROGRAMA -FIM-
+//PARTE 2 DO PROGRAMA -INICIO-
+switch (escolha_operacao){//Switch para cada escolha da variável escolha_operacao.
+    case 1:
+        let escolhas_possiveis_estudar = [2, 3, 4, 5, 6, 7, 8, 9]
+        let escolha_numero_estudar = 'Matemática em Evidência'
+        while (!escolhas_possiveis_estudar.includes(escolha_numero_estudar)){
+            escolha_numero_estudar = parseInt(prompt('Insira o número que quer estudar (de 2 a 9)'))
+            if (!escolhas_possiveis_estudar.includes(escolha_numero_estudar)){
+                alert('Por favor, insira um número válido (de 2 a 9)')
+            }else if (escolhas_possiveis_estudar.includes(escolha_numero_estudar)){
+                break
+            }
+        }
+        switch (escolha_numero_estudar){
+            case 2:
+             for (let c = 0; c <= 7; c++) {
+    document.write(`2 x ${c + 2} = ${2 * (c + 2)} <br>`);
+}
+                break
+            case 3:
+                for (let c = 0; c <= 6; c++){
+                    document.write(`3 x ${c + 3} = ${3 * (c + 3)}<br>`)
+                }
+                break
+            case 4:
+                for (let c = 0; c <= 5; c++){
+                    document.write(`4 x ${c + 4} = ${4 * (c + 4)}<br>`)
+                }
+                break
+            case 5:
+                for (let c = 0; c <= 4; c++){
+                    document.write(`5 x ${c + 5} = ${5 * (c + 5)}<br>`)    
+                }
+                break
+            case 6:
+                for (let c = 0; c <= 3; c++){
+                    document.write(`6 x ${c + 6} = ${6 * (c + 6)}<br>`)
+                }
+                break
+            case 7:
+                for (let c = 0; c <= 2; c++){
+                    document.write(`7 x ${c + 7} = ${7 * (c + 7)}<br>`)
+                }
+                break
+            case 8:
+                for (let c = 0; c <= 1; c++){
+                    document.write(`8 x ${c + 8} = ${8 * (c + 8)}<br>`)
+                }
+                break
+            case 9:
+                for (let c = 0; c <= 0; c++){
+                    document.write(`9 x ${c + 9} = ${9 * (c + 9)}`)
+                }
+                break
+        }
+    break
+    //PARTE 3 DO PROGRAMA -INICIO-
+    case 2:
+        let escolhas_possiveis_jogo = [2, 3, 4, 5, 6, 7, 8, 9]
+        let escolha_jogo = 'Metal Slug XX'
+        while (!escolhas_possiveis_jogo.includes(escolha_jogo)){
+            escolha_jogo = parseInt(prompt('Insira o número que quer brincar (de 2 a 9):'))
+            if (!escolhas_possiveis_jogo.includes(escolha_jogo)){
+                alert('Por favor, insira um número válido (de 2 a 9)')
+            }else if (escolhas_possiveis_jogo.includes(escolha_jogo)){
+                break
+            }
+        }
+        switch (escolha_jogo){
+            case 2:
+                num1 = parseInt(prompt('2 x 6 = ?'))
+                num2 = parseInt(prompt('2 x 4 = ?'))
+                num3 = parseInt(prompt('2 x 8 = ?'))
+                num4 = parseInt(prompt('2 x 2 = ?'))
+                num5 = parseInt(prompt('2 x 5 = ?'))
+                num6 = parseInt(prompt('2 x 9 = ?'))
+                num8 = parseInt(prompt('2 x 3 = ?'))
+                num9 = parseInt(prompt('2 x 7 = ?'))
+                if (num4 == 2*2){
+                    document.write(`2 x 2 = ${num4} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 2 = ${num4} (Errado) 2 x 2 = 4<br>`)
+                }
+                if (num8 == 2*3){
+                    document.write(`2 x 3 = ${num8} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 3 = ${num8} (Errado) 2 x 3 = 6<br>`)
+                }
+                if (num2 == 2*4){
+                    document.write(`2 x 4 = ${num2} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 4 = ${num2} (Errado) 2 x 4 = 8<br>`)
+                }
+                if (num5 == 2*5){
+                    document.write(`2 x 5 = ${num5} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 5 = ${num5} (Errado) 2 x 5 = 10<br>`)
+                }
+                if (num1 == 2*6){
+                    document.write(`2 x 6 = ${num1} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 6 = ${num1} (Errado) 2 x 6 = 12<br>`)
+                }
+                if (num9 == 2*7){
+                    document.write(`2 x 7 = ${num9} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 7 = ${num9} (Errado) 2 x 7 = 14<br>`)
+                }
+                if (num3 == 2*8){
+                    document.write(`2 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 8 = ${num3} (Errado) 2 x 8 = 16<br>`)
+                }
+                if (num6 == 2*9){
+                    document.write(`2 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`2 x 9 = ${num6} (Errado) 2 x 9 = 18`)
+                }
+                break
+            case 3:
+                 num1 = parseInt(prompt('3 x 6 = ?'))
+                num2 = parseInt(prompt('3 x 4 = ?'))
+                num3 = parseInt(prompt('3 x 8 = ?'))
+                num5 = parseInt(prompt('3 x 5 = ?'))
+                num6 = parseInt(prompt('3 x 9 = ?'))
+                num8 = parseInt(prompt('3 x 3 = ?'))
+                num9 = parseInt(prompt('3 x 7 = ?'))
+                if (num8 == 3*3){
+                    document.write(`3 x 3 = ${num8} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 3 = ${num8} (Errado) 3 x 3 = 9<br>`)
+                }
+                if (num2 == 3*4){
+                    document.write(`3 x 4 = ${num2} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 4 = ${num2} (Errado) 3 x 4 = 12<br>`)
+                }
+                if (num5 == 3*5){
+                    document.write(`3 x 5 = ${num5} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 5 = ${num5} (Errado) 3 x 5 = 15<br>`)
+                }
+                if (num1 == 3*6){
+                    document.write(`3 x 6 = ${num1} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 6 = ${num1} (Errado) 3 x 6 = 18<br>`)
+                }
+                if (num9 == 3*7){
+                    document.write(`3 x 7 = ${num9} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 7 = ${num9} (Errado) 3 x 7 = 21<br>`)
+                }
+                if (num3 == 3*8){
+                    document.write(`3 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 8 = ${num3} (Errado) 3 x 8 = 24<br>`)
+                }
+                if (num6 == 3*9){
+                    document.write(`3 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`3 x 9 = ${num6} (Errado) 3 x 9 = 27`)
+                }
+                break
+            case 4:
+                num1 = parseInt(prompt('4 x 6 = ?'))
+                num2 = parseInt(prompt('4 x 4 = ?'))
+                num3 = parseInt(prompt('4 x 8 = ?'))
+                num5 = parseInt(prompt('4 x 5 = ?'))
+                num6 = parseInt(prompt('4 x 9 = ?'))
+                num9 = parseInt(prompt('4 x 7 = ?'))
+                if (num2 == 4*4){
+                    document.write(`4 x 4 = ${num2} (Acertou!!)<br>`)
+                }else{
+                    document.write(`4 x 4 = ${num2} (Errado) 4 x 4 = 16<br>`)
+                }
+                if (num5 == 4*5){
+                    document.write(`4 x 5 = ${num5} (Acertou!!)<br>`)
+                }else{
+                    document.write(`4 x 5 = ${num5} (Errado) 4 x 5 = 20<br>`)
+                }
+                if (num1 == 4*6){
+                    document.write(`4 x 6 = ${num1} (Acertou!!)<br>`)
+                }else{
+                    document.write(`4 x 6 = ${num1} (Errado) 4 x 6 = 24<br>`)
+                }
+                if (num9 == 4*7){
+                    document.write(`4 x 7 = ${num9} (Acertou!!)<br>`)
+                }else{
+                    document.write(`4 x 7 = ${num9} (Errado) 4 x 7 = 28<br>`)
+                }
+                if (num3 == 4*8){
+                    document.write(`4 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`4 x 8 = ${num3} (Errado) 4 x 8 = 32<br>`)
+                }
+                if (num6 == 4*9){
+                    document.write(`4 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`4 x 9 = ${num6} (Errado) 4 x 9 = 36`)
+                }
+                break
+            case 5:
+                num1 = parseInt(prompt('5 x 6 = ?'))
+                num3 = parseInt(prompt('5 x 8 = ?'))
+                num5 = parseInt(prompt('5 x 5 = ?'))
+                num6 = parseInt(prompt('5 x 9 = ?'))
+                num9 = parseInt(prompt('5 x 7 = ?'))
+                if (num5 == 5*5){
+                    document.write(`5 x 5 = ${num5} (Acertou!!)<br>`)
+                }else{
+                    document.write(`5 x 5 = ${num5} (Errado) 5 x 5 = 25<br>`)
+                }
+                if (num1 == 5*6){
+                    document.write(`5 x 6 = ${num1} (Acertou!!)<br>`)
+                }else{
+                    document.write(`5 x 6 = ${num1} (Errado) 5 x 6 = 30<br>`)
+                }
+                if (num9 == 5*7){
+                    document.write(`5 x 7 = ${num9} (Acertou!!)<br>`)
+                }else{
+                    document.write(`5 x 7 = ${num9} (Errado) 5 x 7 = 35<br>`)
+                }
+                if (num3 == 5*8){
+                    document.write(`5 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`5 x 8 = ${num3} (Errado) 5 x 8 = 40<br>`)
+                }
+                if (num6 == 5*9){
+                    document.write(`5 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`5 x 9 = ${num6} (Errado) 5 x 9 = 45`)
+                }
+                break
+            case 6:
+                num1 = parseInt(prompt('6 x 6 = ?'))
+                num3 = parseInt(prompt('6 x 8 = ?'))
+                num6 = parseInt(prompt('6 x 9 = ?'))
+                num9 = parseInt(prompt('6 x 7 = ?'))
+                if (num1 == 6*6){
+                    document.write(`6 x 6 = ${num1} (Acertou!!)<br>`)
+                }else{
+                    document.write(`6 x 6 = ${num1} (Errado) 6 x 6 = 36<br>`)
+                }
+                if (num9 == 6*7){
+                    document.write(`6 x 7 = ${num9} (Acertou!!)<br>`)
+                }else{
+                    document.write(`6 x 7 = ${num9} (Errado) 6 x 7 = ${6*7}<br>`)
+                }
+                if (num3 == 6*8){
+                    document.write(`6 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`6 x 8 = ${num3} (Errado) 6 x 8 = ${6*8}<br>`)
+                }
+                if (num6 == 6*9){
+                    document.write(`6 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`6 x 9 = ${num6} (Errado) 6 x 9 = ${6*9}`)
+                }
+                break
+            case 7:
+                num3 = parseInt(prompt('7 x 8 = ?'))
+                num6 = parseInt(prompt('7 x 9 = ?'))
+                num9 = parseInt(prompt('7 x 7 = ?'))
+                if (num9 == 7*7){
+                    document.write(`7 x 7 = ${num9} (Acertou!!)<br>`)
+                }else{
+                    document.write(`7 x 7 = ${num9} (Errado) 7 x 7 = ${7*7}<br>`)
+                }
+                if (num3 == 7*8){
+                    document.write(`7 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`7 x 8 = ${num3} (Errado) 7 x 8 = ${7*8}<br>`)
+                }
+                if (num6 == 7*9){
+                    document.write(`7 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`7 x 9 = ${num6} (Errado) 7 x 9 = ${7*9}`)
+                }
+                break
+            case 8:
+                num3 = parseInt(prompt('8 x 8 = ?'))
+                num6 = parseInt(prompt('8 x 9 = ?'))
+                if (num3 == 8*8){
+                    document.write(`8 x 8 = ${num3} (Acertou!!)<br>`)
+                }else{
+                    document.write(`8 x 8 = ${num3} (Errado) 8 x 8 = ${8*8}<br>`)
+                }
+                if (num6 == 8*9){
+                    document.write(`8 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`8 x 9 = ${num6} (Errado) 8 x 9 = ${8*9}`)
+                }
+                break
+            case 9:
+                num6 = parseInt(prompt('9 x 9 = ?'))
+                if (num6 == 9*9){
+                    document.write(`9 x 9 = ${num6} (Acertou!!)<br>`)
+                }else{
+                    document.write(`9 x 9 = ${num6} (Errado) 9 x 9 = ${9*9}`)
+                }
+                break
+    //PARTE 3 DO PROGRAMA -FIM-
+        }
+    break
+    //PARTE 4 DO PROGRAMA -INICIO-
+    case 3:
+        window.location.assign("https://youtu.be/dSvQnPtKiVg?si=2RN7gM99D8JwbZZr")
+        break
+    //PARTE 4 DO PROGRAMA -FIM-
+}//Switch para cada escolha da variável escolha_operacao.
+  </script>  
+</body>
+</html>
